@@ -1,32 +1,37 @@
 class Eco {
-  PImage eco;
   int x, y, i;
-  Eco (int x, int y, int i){
+  PImage [] eco;
+  Eco (int x, int y, int i) {
     this.x = x;
     this.y = y;
     this.i = i;
+    eco = new PImage[4];
+
+    for  (i = 0; i<eco.length; i ++) {
+      eco[i] = loadImage("eco"+i+".png");
+    }
   }
-  void imagen (){
-  eco = loadImage ("eco"+i+".png");
-  eco.resize(60, 70);
-  image(eco, x, y);
+  void eco () {
+    image(eco[i], x, y);
   }
-  
-  void teclas (int precionar){
-    if (precionar == RIGHT){
-      x +=2;
+
+  void mover (int presionar) {
+
+
+    if (presionar == RIGHT) {
+      x +=5;
       i = 0;
     }
-      if (precionar == LEFT) {
-      x -=2;
+    if (presionar == LEFT) {
+      x -=5;
       i=1;
     }
-    if (precionar == UP) {
-      y -=2;
+    if (presionar == UP) {
+      y -=5;
       i=2;
     }
-    if (precionar == DOWN) {
-      y +=2;
+    if (presionar == DOWN) {
+      y +=5;
       i=3;
     }
   }
