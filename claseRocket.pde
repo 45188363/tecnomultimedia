@@ -1,21 +1,28 @@
-class Rocket{
-PImage rocket;
-int x,y,i;
-float size;
-Rocket(int x, int y,int i){
-  this.x = x;
-  this.y = y;
-  this.i = i;
-}
-void rocket (){
-  rocket = loadImage("rocket0.png");
-  rocket.resize(60, 70);
-  image(rocket, x%2, y);
-  
-  
-  rocket = loadImage("rocket1.png");
-  rocket.resize(60, 70);
-  image(rocket, x, y+50);
-  // aca los "rocket" tengo que hacer q se muevan y que tengan colision y tambien quiero ponerlo con arreglos
+class Rocket {
+  int i;
+  float x, y, dx, dy;
+  PImage [] rocket;
+  Rocket(float x, float y, int i, float dx, float dy) {
+    this.x = x;
+    this.y = y;
+    this.i = i;
+    this.dx = dx;
+    this.dy = dy;
+    rocket = new PImage[4];
+
+    for (i = 0; i<rocket.length; i ++) {
+      rocket[i] = loadImage("rocket"+i+".png");
+    }
+  }
+  void rocket () {
+    image(rocket[i], x, y);
+  }
+
+  void mover () {
+    if (dx>width-25 || dx<width-25) {
+      x -= 10;
+    }
+    dx += x;
+    dy -= y;
   }
 }
