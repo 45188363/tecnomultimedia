@@ -7,7 +7,6 @@ class Fondos {
     fy = 0;
     for (int i=0; i<6; i++) {
       fondos[i] = loadImage("fondo"+i+".jpg");
-      
     }
   }
 
