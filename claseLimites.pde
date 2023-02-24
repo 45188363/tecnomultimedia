@@ -6,11 +6,9 @@ class Limites {
     this.ancho = ancho;
     this.alto = alto;
   }
-  
-  void rectangulos() {
-    noStroke();
-    noFill();
+  void dibujarVallas() {
+    noStroke(); //sin lineas
+    noFill(); //sin relleno
     rect(x, y, ancho, alto);
   }
-
 }
