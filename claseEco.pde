@@ -1,38 +1,29 @@
-
 class Eco {
-  int x, y, i, tam;
-  PImage [] eco, der;
-  Eco (int x, int y, int i, int tam) { // constructor
+  int x, y, tam;
+  PImage eco;
+  Eco (int x, int y, int tam) { // constructor
     this.x = x;
     this.y = y;
-    this.i = i;
     this.tam = tam;
-    eco = new PImage[4];
 
-    for  (i = 0; i<eco.length; i ++) {
-      eco[i] = loadImage("eco"+i+".png");
-    }
+      eco = loadImage("eco.png");
   }
   void dibujar () { // pone a Eco en patalla
-    image(eco[i], x, y, 35, 45);
+    image(eco, x, y, 35, 45);
   }
 
   void mover (int presionar) { // mueve a Eco
     if (presionar == RIGHT) {
-      x +=60;
-      i = 0;
+      x +=60;  
     }
     if (presionar == LEFT) {
       x -=60;
-      i=1;
     }
     if (presionar == UP) {
       y -=60;
-      i=2;
     }
     if (presionar == DOWN) {
       y +=60;
-      i=3;
     }
   }
 
