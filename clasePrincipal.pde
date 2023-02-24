@@ -37,7 +37,7 @@ class Principal {
     for (int i=0; i<cantidad; i++) {
       vidaE [i] = new Vida(490+i*50, -30);
     }
-    e = new Eco (70, 4, 3, 40);
+    e = new Eco (70, 4, 40);
     f = new Fondos ();
     p = new Pokeball();
   }
