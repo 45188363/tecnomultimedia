@@ -1,7 +1,7 @@
 //tp5
 //Alumno: Bernal Facundo
 //Legajo: 91488/1
-//LINK DEL VIDEO: https://youtu.be/y3jFw8Vb-hk
+
 
 import processing.sound.*;
 SoundFile fondo;
