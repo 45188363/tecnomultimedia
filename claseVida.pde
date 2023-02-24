@@ -8,7 +8,6 @@ class Vida {
     x = vx;
     y = vy;
   }
-
   void vida() {
     image(corazon, x, y);
   }
