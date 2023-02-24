@@ -4,7 +4,7 @@ class Pokeball {
   int py;
 
   Pokeball () {//constructor
-    px = 370;
+    px = 140;
     py = 570;
     pokeball = loadImage("pokeball.png");
     pokeball.resize(25, 25);
