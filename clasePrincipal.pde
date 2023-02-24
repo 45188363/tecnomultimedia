@@ -1,7 +1,6 @@
 class Principal {
   int cantidad = 3;
   int escenarios;
-  // Limites [] lim = new Limites[4];
   Rocket [] rockets = new Rocket [1]; //arreglos
   Rocket [] rockets1 = new Rocket [1];
   Vida [] vidaE = new Vida [cantidad];
