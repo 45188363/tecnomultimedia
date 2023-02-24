@@ -5,10 +5,10 @@ class Rocket {
 
   Rocket(int posx, int posy) { //constructor
     rocket = loadImage("rocket1.png");
-   
+
     x = posx;
     y = posy;
-    velY = 2;
+    velY = 1;
   }
 
   void Dibujar() {
@@ -17,20 +17,20 @@ class Rocket {
 
   void mover() {
     if (y<0) {
-      velY=2;
+      velY=1;
     }
-    if (y>220) {
-      velY=-2;
+    if (y>260) {
+      velY=-1;
     }
     y=y+velY;
   }
-  
+
   void mover1() {
-    if (y<280) {
-      velY=2;
+    if (y<250) {
+      velY=1;
     }
-    if (y>500) {
-      velY=-2;
+    if (y>490) {
+      velY=-1;
     }
     y=y+velY;
   }
